@@ -44,7 +44,11 @@ require ("session.php");
 							<!-- Post -->
 								<article class="box post post-excerpt">
 									<header>
-										<div><img src="images/twitter.jpg" width="100%"></div>
+										<div>
+											<form action="../con_registrar.php" method="post">
+
+											</form>
+										</div>
 
 									</header>
 									<div class="info">
