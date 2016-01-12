@@ -259,11 +259,19 @@ function consolidado($gestor, $mes){
 	$consulta= new reporte();
 
 	$resultado= $consulta->consolidado_info($gestor,$mes,$mysqlconn);
-if($resultado){
+
+if (mysqli_num_rows($resultado)==0) {
+	$a=0;
+	$cons=json_encode(array( 'value' =>$a ));
+
+		echo" $cons,";
+}
 
 			 for($i=0; $i<mysqli_num_rows($resultado); $i++){
  $row= mysqli_fetch_array($resultado, MYSQLI_ASSOC);
  $a=$row["num"];
+
+
 
 
  $array[$i] = array( 'value' =>$a );
@@ -275,6 +283,6 @@ if($resultado){
 
 		echo" $cons,";
 			}
-			}// if
+
                          }//end con
 ?>

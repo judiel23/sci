@@ -255,11 +255,11 @@ if (opcion == 'hoy'||opcion == 'Seleccione' ){
             ]
         },
          {
-            "seriesname": "Ctineo1",
+            "seriesname": "Ctineo01",
             "color": "860CAB",
             "data": [
               <?php for ($i=1; $i <=12; $i++) {
-                consolidado('Ctineo1',$i);
+                consolidado('Ctineo01',$i);
               } ?>
             ]
         },
