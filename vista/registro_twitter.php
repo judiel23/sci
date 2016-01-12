@@ -44,4 +44,28 @@ require ("session.php");
 							<!-- Post -->
 								<article class="box post post-excerpt">
 									<header>
-										<d
+										<div><img src="images/twitter.jpg" width="100%"></div>
+
+									</header>
+									<div class="info">
+
+										<span class="date"><span class="month">Twitter</span> <!--<span class="day">14</span><span class="year">2014</span></span>-->
+										<!--
+											Note: You can change the number of list items in "stats" to whatever you want.
+										-->
+
+									<div></div>
+								</article>
+
+                                 </div>
+					</div>
+
+				<?php
+require ("menu.php");
+?>
+					</div>
+
+			</div>
+
+	</body>
+</html>
