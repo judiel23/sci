@@ -1,0 +1,1 @@
+<ul id="copyright"><li>&copy; Moreira / Reyes / Garcia Design v.2.0</ul>
