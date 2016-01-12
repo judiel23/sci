@@ -132,7 +132,7 @@ require ("session.php");
 				<?php
 require ("menu.php");
 ?>
-=======
+
 										<span class="date"><span class="month">Twitter</span> <!--<span class="day">14</span><span class="year">2014</span></span>-->
 										<!--
 											Note: You can change the number of list items in "stats" to whatever you want.
@@ -150,7 +150,7 @@ require ("menu.php");
 					</div>
 
 			</div>
->>>>>>> fc635f1588042f985786e64cff20d86b8ad0f18e
+
 
 	</body>
 </html>
