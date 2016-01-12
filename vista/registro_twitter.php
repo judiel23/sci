@@ -13,6 +13,8 @@ require ("session.php");
 		<script src="js/skel.min.js"></script>
 		<script src="js/skel-layers.min.js"></script>
 		<script src="js/init.js"></script>
+		 <script type="text/javascript" src="../fusioncharts/js/fusioncharts.js"></script>
+        <script type="text/javascript" src="../fusioncharts/js/themes/fusioncharts.theme.carbon.js"></script>
 		<noscript>
 			<link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
@@ -118,6 +120,31 @@ require ("session.php");
     <p>&nbsp;</p>
     </div>
 </form></p>
+ <?php require ("../controlador/con_grafico.php");?>
+<div id="twitter"><script type="text/javascript"> FusionCharts.ready(function(){
+	var revenueChart = new FusionCharts({
+        "type": "column3d",
+        "renderAt": "twitter",
+
+        "width": "700",
+        "height": "350",
+        "dataFormat": "json",
+        "dataSource": {
+          "chart": {
+              "caption": "Casos Registrados por mes",
+              "subCaption": " ",
+              "xAxisName": "Mes",
+              "yAxisName": "Cantidad de Registros",
+              "theme": "carbon"
+           },
+          "data": [
+            <?php twitter_mes();?>
+           ]
+        }
+    });
+
+    revenueChart.render();
+})</script></div>
 
 
 

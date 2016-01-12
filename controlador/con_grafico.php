@@ -285,4 +285,34 @@ if (mysqli_num_rows($resultado)==0) {
 			}
 
                          }//end con
+
+
+
+
+                         function twitter_mes(){
+ 	$conexion = new Connex();
+	$mysqlconn= $conexion->conectar();
+
+
+	$consulta= new reporte();
+
+	$resultado= $consulta->twitter_m($mysqlconn);
+if($resultado){
+
+			 for($i=0; $i<mysqli_num_rows($resultado); $i++){
+ $row= mysqli_fetch_array($resultado, MYSQLI_ASSOC);
+ $a=$row["num"];
+ $b=$row["mes"];
+
+ $array[$i] = array( 'label'=>$b,'value' =>$a );
+
+	$cons=json_encode($array[$i]);
+
+
+
+
+		echo" $cons,";
+			}
+			}// if
+                         }//end con
 ?>

@@ -134,7 +134,14 @@ public function consolidado_info($gestor, $mes,$mysqlconn){
 		return $consulta;
 
 		}//function voz_canal
+public function twitter_m($mysqlconn){
 
+		$query= "SELECT sum(twi_cantidad) as num, twi_mes as mes FROM twitter GROUP BY mes";
+		$consulta= mysqli_query($mysqlconn, $query) or die ("Consulta Errónea: ".mysqli_error($mysqlconn));
+
+		return $consulta;
+
+		}//function voz_canal
 
 
 
