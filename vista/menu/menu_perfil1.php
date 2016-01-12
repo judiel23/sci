@@ -16,6 +16,15 @@
 									<li><a href="#">Manuales</a></li>-->
 								</ul>
 								</li>
+								<li><a href="javascript:void();">Twitter</a>
+									<ul>
+									<li><a href="#">Registro</a></li>
+									<li><a href="#">Estadisticas</a></li>
+									<li><a href="consolidado_twitter.php">Consolidado</a></li>
+									<!--<li><a href="#">modificar</a></li>
+									<li><a href="#">Manuales</a></li>-->
+								</ul>
+								</li>
 									<li><a href="javascript:void();">Info</a>
 									<ul>
 									<li><a href="registro_info.php">Registro</a></li>
@@ -52,7 +61,6 @@
 									<li><a href="#">Manuales</a></li>-->
 								</ul>
 								</li>
-								<li><a href="consolidado_twitter.php" >Twitter</a></li>
 								<li><a href="manual.pdf" target="_blank">Manual</a></li>
 								<li><a href="salir.php">Salir</a></li>
 								<!--<li><a href="actualizar_clave.php">Cambiar Contraseña</a></li>-->
