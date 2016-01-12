@@ -160,17 +160,17 @@ if (opcion == 'hoy'||opcion == 'Seleccione' ){
 
 <div id="consolidado"><script type="text/javascript"> FusionCharts.ready(function(){
 	var inChart = new FusionCharts({
-        "type": "mscolumn2d",
+        "type": "mscolumn3d",
         "renderAt": "consolidado",
 
-        "width": "700",
-        "height": "400",
+        "width": "900",
+        "height": "550",
         "dataFormat": "json",
         "dataSource": {
     "chart": {
         "palette": "3",
-        "caption": "Production Report",
-        "yaxisname": "Units",
+        "caption": "Consolidado 2015",
+        "yaxisname": "Cantidad",
         "showvalues": "0",
         "numvdivlines": "10",
         "divlinealpha": "30",
@@ -227,7 +227,7 @@ if (opcion == 'hoy'||opcion == 'Seleccione' ){
     ],
     "dataset": [
         {
-            "seriesname": "Model A12",
+            "seriesname": "Mmorei01",
             "color": "A66EDD",
             "data": [
                 {
@@ -251,9 +251,160 @@ if (opcion == 'hoy'||opcion == 'Seleccione' ){
                 }
             ]
         },
+
+         {
+            "seriesname": "Jreyes05",
+            "color": "829AFC",
+            "data": [
+                {
+                    "value": "35"
+                },
+                {
+                    "value": "42"
+                },
+                {
+                    "value": "31"
+                },
+                {
+                    "value": "28"
+                },
+                {
+                    "value": "34"
+                },
+                {
+                    "value": "30",
+
+                }
+            ]
+        },
+         {
+            "seriesname": "Cgarci01",
+            "color": "5DFFBC",
+            "data": [
+                {
+                    "value": "35"
+                },
+                {
+                    "value": "42"
+                },
+                {
+                    "value": "31"
+                },
+                {
+                    "value": "28"
+                },
+                {
+                    "value": "34"
+                },
+                {
+                    "value": "30",
+
+                }
+            ]
+        },
+         {
+            "seriesname": "Ctineo1",
+            "color": "860CAB",
+            "data": [
+                {
+                    "value": "35"
+                },
+                {
+                    "value": "42"
+                },
+                {
+                    "value": "31"
+                },
+                {
+                    "value": "28"
+                },
+                {
+                    "value": "34"
+                },
+                {
+                    "value": "30",
+
+                }
+            ]
+        },
+         {
+            "seriesname": "Jgonza21",
+            "color": "BFD052",
+            "data": [
+                {
+                    "value": "35"
+                },
+                {
+                    "value": "42"
+                },
+                {
+                    "value": "31"
+                },
+                {
+                    "value": "28"
+                },
+                {
+                    "value": "34"
+                },
+                {
+                    "value": "30",
+
+                }
+            ]
+        },
+         {
+            "seriesname": "Hherna08",
+            "color": "701705",
+            "data": [
+                {
+                    "value": "35"
+                },
+                {
+                    "value": "42"
+                },
+                {
+                    "value": "31"
+                },
+                {
+                    "value": "28"
+                },
+                {
+                    "value": "34"
+                },
+                {
+                    "value": "30",
+
+                }
+            ]
+        },
+         {
+            "seriesname": "Ypinov01",
+            "color": "00A674",
+            "data": [
+                {
+                    "value": "35"
+                },
+                {
+                    "value": "42"
+                },
+                {
+                    "value": "31"
+                },
+                {
+                    "value": "28"
+                },
+                {
+                    "value": "34"
+                },
+                {
+                    "value": "30",
+
+                }
+            ]
+        },
         {
-            "seriesname": "Model A15",
-            "color": "F6BD0F",
+            "seriesname": "Jnunez01",
+            "color": "F06F6F",
             "data": [
                 {
                     "value": "22"
