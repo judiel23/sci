@@ -35,11 +35,15 @@ require ("session.php");
 								<article class="box post post-excerpt">
 									<header>
 
+
 										<h2><a href="#">Registro De Casos</a></h2>
 										<hr>
 
+
+
 									</header>
 									<div class="info">
+
 
 										<!-- TITULO EN LA PESTAÑA-->
 										<span class="date"><span class="month">Gestores</span> <!--<span class="day">14</span><span class="year">, 2014</span></span>-->
@@ -128,6 +132,25 @@ require ("session.php");
 				<?php
 require ("menu.php");
 ?>
+=======
+										<span class="date"><span class="month">Twitter</span> <!--<span class="day">14</span><span class="year">2014</span></span>-->
+										<!--
+											Note: You can change the number of list items in "stats" to whatever you want.
+										-->
+
+									<div></div>
+								</article>
+
+                                 </div>
+					</div>
+
+				<?php
+require ("menu.php");
+?>
+					</div>
+
+			</div>
+>>>>>>> fc635f1588042f985786e64cff20d86b8ad0f18e
 
 	</body>
 </html>

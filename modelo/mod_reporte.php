@@ -125,5 +125,18 @@ class reporte {
 		}//function voz_canal
 
 
+
+public function consolidado_info($gestor, $mes,$mysqlconn){
+
+		$query= "SELECT count(*) as num , in_nomges FROM info WHERE in_nomges='$gestor' and in_fecharesp between '2015-$mes-01' and '2015-$mes-31' group by in_nomges";
+		$consulta= mysqli_query($mysqlconn, $query) or die ("Consulta Errónea: ".mysqli_error($mysqlconn));
+
+		return $consulta;
+
+		}//function voz_canal
+
+
+
+
 }//class reporte
 ?>

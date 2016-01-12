@@ -230,24 +230,9 @@ if (opcion == 'hoy'||opcion == 'Seleccione' ){
             "seriesname": "Mmorei01",
             "color": "A66EDD",
             "data": [
-                {
-                    "value": "35"
-                },
-                {
-                    "value": "42"
-                },
-                {
-                    "value": "31"
-                },
-                {
-                    "value": "28"
-                },
-                {
-                    "value": "34"
-                },
-                {
-                    "value": "30",
-                }
+              <?php for ($i=1; $i <=12; $i++) {
+                consolidado('Mmorei01',$i);
+              } ?>
             ]
         },
 
@@ -255,175 +240,63 @@ if (opcion == 'hoy'||opcion == 'Seleccione' ){
             "seriesname": "Jreyes05",
             "color": "829AFC",
             "data": [
-                {
-                    "value": "35"
-                },
-                {
-                    "value": "42"
-                },
-                {
-                    "value": "31"
-                },
-                {
-                    "value": "28"
-                },
-                {
-                    "value": "34"
-                },
-                {
-                    "value": "30",
-
-                }
+                  <?php for ($i=1; $i <=12; $i++) {
+                consolidado('Jreyes05',$i);
+              } ?>
             ]
         },
          {
             "seriesname": "Cgarci01",
             "color": "5DFFBC",
             "data": [
-                {
-                    "value": "35"
-                },
-                {
-                    "value": "42"
-                },
-                {
-                    "value": "31"
-                },
-                {
-                    "value": "28"
-                },
-                {
-                    "value": "34"
-                },
-                {
-                    "value": "30",
-
-                }
+               <?php for ($i=1; $i <=12; $i++) {
+                consolidado('Cgarci01',$i);
+              } ?>
             ]
         },
          {
-            "seriesname": "Ctineo1",
+            "seriesname": "Ctineo01",
             "color": "860CAB",
             "data": [
-                {
-                    "value": "35"
-                },
-                {
-                    "value": "42"
-                },
-                {
-                    "value": "31"
-                },
-                {
-                    "value": "28"
-                },
-                {
-                    "value": "34"
-                },
-                {
-                    "value": "30",
-
-                }
+              <?php for ($i=1; $i <=12; $i++) {
+                consolidado('Ctineo01',$i);
+              } ?>
             ]
         },
          {
             "seriesname": "Jgonza21",
             "color": "BFD052",
             "data": [
-                {
-                    "value": "35"
-                },
-                {
-                    "value": "42"
-                },
-                {
-                    "value": "31"
-                },
-                {
-                    "value": "28"
-                },
-                {
-                    "value": "34"
-                },
-                {
-                    "value": "30",
-
-                }
+               <?php for ($i=1; $i <=12; $i++) {
+                consolidado('Jgonza21',$i);
+              } ?>
             ]
         },
          {
             "seriesname": "Hherna08",
             "color": "701705",
             "data": [
-                {
-                    "value": "35"
-                },
-                {
-                    "value": "42"
-                },
-                {
-                    "value": "31"
-                },
-                {
-                    "value": "28"
-                },
-                {
-                    "value": "34"
-                },
-                {
-                    "value": "30",
-
-                }
+               <?php for ($i=1; $i <=12; $i++) {
+                consolidado('Hherna08',$i);
+              } ?>
             ]
         },
          {
             "seriesname": "Ypinov01",
             "color": "00A674",
             "data": [
-                {
-                    "value": "35"
-                },
-                {
-                    "value": "42"
-                },
-                {
-                    "value": "31"
-                },
-                {
-                    "value": "28"
-                },
-                {
-                    "value": "34"
-                },
-                {
-                    "value": "30",
-
-                }
+             <?php for ($i=1; $i <=12; $i++) {
+                consolidado('Ypinov01',$i);
+              } ?>
             ]
         },
         {
             "seriesname": "Jnunez01",
             "color": "F06F6F",
             "data": [
-                {
-                    "value": "22"
-                },
-                {
-                    "value": "25"
-                },
-                {
-                    "value": "18"
-                },
-                {
-                    "value": "22"
-                },
-                {
-                    "value": "17"
-                },
-                {
-                    "value": "16",
-
-                }
+             <?php for ($i=1; $i <=12; $i++) {
+                consolidado('Jnunez01',$i);
+              } ?>
             ]
         }
     ]
