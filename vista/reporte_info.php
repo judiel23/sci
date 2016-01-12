@@ -185,31 +185,41 @@ if (opcion == 'hoy'||opcion == 'Seleccione' ){
         {
             "category": [
                 {
-                    "label": "Enero"
+                    "label": "Ene"
                 },
                 {
-                    "label": "Febrero"
+                    "label": "Feb"
                 },
                 {
-                    "label": "Marzo"
+                    "label": "Mar"
                 },
                 {
-                    "label": "Abril"
+                    "label": "Abr"
                 },
                 {
-                    "label": "Mayo"
+                    "label": "May"
                 },
                 {
-                    "label": "Junio "
+                    "label": "Jun "
                 },
                 {
-                    "label": "Julio "
+                    "label": "Jul"
                 },
+
                 {
-                    "label": "Junio "
+                    "label": "Ago"
                 },
-                {
-                    "label": "Agosto "
+                   {
+                    "label": "Sep"
+                },
+                   {
+                    "label": "Oct"
+                },
+                   {
+                    "label": "Nov"
+                },
+                   {
+                    "label": "Dic"
                 }
 
             ]
@@ -237,7 +247,7 @@ if (opcion == 'hoy'||opcion == 'Seleccione' ){
                 },
                 {
                     "value": "30",
-                    "dashed": "1"
+
                 }
             ]
         },
@@ -262,7 +272,7 @@ if (opcion == 'hoy'||opcion == 'Seleccione' ){
                 },
                 {
                     "value": "16",
-                    "dashed": "1"
+
                 }
             ]
         }
