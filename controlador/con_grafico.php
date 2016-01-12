@@ -248,4 +248,33 @@ if($resultado){
 			}// if
                          }//end con
 
+
+
+
+function consolidado_info(){
+ 	$conexion = new Connex();
+	$mysqlconn= $conexion->conectar();
+
+
+	$consulta= new reporte();
+
+	$resultado= $consulta->consolidado_info($mysqlconn);
+if($resultado){
+
+			 for($i=0; $i<mysqli_num_rows($resultado); $i++){
+ $row= mysqli_fetch_array($resultado, MYSQLI_ASSOC);
+ $a=$row["num"];
+ $b=$row["voz_estatus"];
+
+ $array[$i] = array( 'label'=>$b,'value' =>$a );
+
+	$cons=json_encode($array[$i]);
+
+
+
+
+		echo" $cons,";
+			}
+			}// if
+                         }//end con
 ?>

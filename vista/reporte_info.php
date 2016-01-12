@@ -160,7 +160,7 @@ if (opcion == 'hoy'||opcion == 'Seleccione' ){
 
 <div id="consolidado"><script type="text/javascript"> FusionCharts.ready(function(){
 	var inChart = new FusionCharts({
-        "type": "mscolumn3d",
+        "type": "mscolumn2d",
         "renderAt": "consolidado",
 
         "width": "900",
@@ -247,7 +247,6 @@ if (opcion == 'hoy'||opcion == 'Seleccione' ){
                 },
                 {
                     "value": "30",
-
                 }
             ]
         },
