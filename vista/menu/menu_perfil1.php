@@ -18,7 +18,7 @@
 								</li>
 								<li><a href="javascript:void();">Twitter</a>
 									<ul>
-									<li><a href="#">Registro</a></li>
+									<li><a href="registro_twitter.php">Registro</a></li>
 									<li><a href="#">Estadisticas</a></li>
 									<li><a href="consolidado_twitter.php">Consolidado</a></li>
 									<!--<li><a href="#">modificar</a></li>
