@@ -45,7 +45,7 @@ require ("session.php");
 								<article class="box post post-excerpt">
 									<header>
 										<div><img src="images/twitter.jpg" width="100%"></div>
-										<div><img src="images/logo.png" width="100%"></div>
+										<div><img src="images/motivos.jpg" width="100%" heigth="90%"></div>
 
 									</header>
 									<div class="info">
