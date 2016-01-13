@@ -1,53 +1,80 @@
 <?php
 require ("session.php");
 ?>
+<!DOCTYPE HTML>
 <html>
 	<head>
+		<title>Registro Twitter</title>
 		<link rel="icon" href="images/logot.png" type="image" sizes="16x16">
-		<title>Twitter</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
 		<script src="js/jquery.min.js"></script>
 		<script src="js/skel.min.js"></script>
+		<script type="text/javascript" src="../fusioncharts/js/fusioncharts.js"></script>
+		<script type="text/javascript" src="../fusioncharts/js/themes/fusioncharts.theme.carbon.js"></script>
 		<script src="js/skel-layers.min.js"></script>
 		<script src="js/init.js"></script>
-		<script type="text/javascript" src="../fusioncharts/js/fusioncharts.js"></script>
-        <script type="text/javascript" src="../fusioncharts/js/themes/fusioncharts.theme.carbon.js"></script>
-		<noscript>
+	<noscript>
 			<link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
 			<link rel="stylesheet" href="css/style-desktop.css" />
 			<link rel="stylesheet" href="css/style-wide.css" />
 		</noscript>
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+
 	</head>
-<body class="left-sidebar">
+	<!--
+		Note: Set the body element's class to "left-sidebar" to position the sidebar on the left.
+		Set it to "right-sidebar" to, you guessed it, position it on the right.
+	-->
+	<body class="left-sidebar">
 
 		<!-- Wrapper -->
-	<div id="wrapper">
+			<div id="wrapper">
 
-		<!-- Content -->
-	<div id="content">
-	<div class="inner">
+				<!-- Content -->
+					<div id="content">
+						<div class="inner">
 
-		<!-- Post -->
-	<article class="box post post-excerpt">
-	<header>
-	<h2><a href="#">Registro De Casos</a></h2>
-	</header>
-	<div class="info">
+							<!-- Post -->
+								<article class="box post post-excerpt">
+									<header>
+									  <h2>Registro de Casos Twitter</h2>
+									  <hr>
+										<!--
+											Note: Titles and subtitles will wrap automatically when necessary, so don't worry
+											if they get too long. You can also remove the <p> entirely if you don't
+											need a subtitle.
+										-->
+										<h2><!--<a href="#">Info@</a></h2>-->
+										<!--<p>A free, fully responsive HTML5 site template by HTML5 UP</p>-->
+									</header>
+									<div class="info">
+										<!--
+											Note: The date should be formatted exactly as it's shown below. In particular, the
+											"least significant" characters of the month should be encapsulated in a <span>
+											element to denote what gets dropped in 1200px mode (eg. the "uary" in "January").
+											Oh, and if you don't need a date for a particular page or post you can simply delete
+											the entire "date" element.
 
-		<!-- TITULO EN LA PESTAÑA-->
-	<span class="date"><span class="month">Gestores</span>
-
-	</div>
-
-  	<div align="center" >
-    <h2>Complete los campos por gestor</h2>
-	<br>
-	<form id="form1" name="form1" method="post" action="../controlador/con_registrar_twitter.php">
+										-->
+										<span class="date"><span class="month">Twitter<span>y</span></span> <!--<span class="day">14</span><span class="year">, 2014</span></span>-->
+										<!--
+											Note: You can change the number of list items in "stats" to whatever you want.
+										-->
+										<ul class="stats">
+											<!--<li><a href="#" class="icon fa-comment">16</a></li>
+											<li><a href="#" class="icon fa-heart">32</a></li>
+											<li><a href="#" class="icon fa-twitter">64</a></li>
+											<li><a href="#" class="icon fa-facebook">128</a></li>-->
+										</ul>
+									</div>
+									<div align="center">
+									<form id="form1" name="form1" method="post" action="../controlador/con_registrar_twitter.php">
+<h2>Llene el formulario para registrar sus datos en el sistema</h2>
+<br>
     <table width="500" border="1">
   	<tr>
     <td >
@@ -102,13 +129,16 @@ require ("session.php");
   </tr>
 
   <tr>
-    <td colspan="4" align="center"><input type="submit" name="enviar" id="enviar" value="Enviar" />
-      <!--<input type="reset" name="borrar" id="borrar" value="Borrar" /></td>-->	</td>
+    <td colspan="4" align="center">
+    	<br>
+    	<input type="submit" name="enviar" id="enviar" value="Enviar" />
+   </td>
     </tr>
 
 </table>
 
 </form>
+
  <?php require ("../controlador/con_grafico.php");?>
 <div id="twitter" ></a>><script type="text/javascript"> FusionCharts.ready(function(){
 	var revenueChart = new FusionCharts({
@@ -133,21 +163,20 @@ require ("session.php");
     });
 
     revenueChart.render();
-})</script></div>
-</div>
+})</script>
 </div>
 
-<!-- Sidebar -->
+
+								</article>
+
+
+					         </div>
 <?php
 require ("menu.php");
 ?>
 
-<span class="date"><span class="month">Twitter</span>
+                        </div>
+			</div>
 
-</article>
-
-<?php
-require ("menu.php");
-?>
-</body>
+	</body>
 </html>
