@@ -13,7 +13,7 @@ require ("session.php");
 		<script src="js/skel.min.js"></script>
 		<script src="js/skel-layers.min.js"></script>
 		<script src="js/init.js"></script>
-		 <script type="text/javascript" src="../fusioncharts/js/fusioncharts.js"></script>
+		<script type="text/javascript" src="../fusioncharts/js/fusioncharts.js"></script>
         <script type="text/javascript" src="../fusioncharts/js/themes/fusioncharts.theme.carbon.js"></script>
 		<noscript>
 			<link rel="stylesheet" href="css/skel.css" />
@@ -23,48 +23,38 @@ require ("session.php");
 		</noscript>
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 	</head>
-
-	<body class="left-sidebar">
+<body class="left-sidebar">
 
 		<!-- Wrapper -->
-			<div id="wrapper">
+	<div id="wrapper">
 
-				<!-- Content -->
-					<div id="content">
-						<div class="inner">
+		<!-- Content -->
+	<div id="content">
+	<div class="inner">
 
-							<!-- Post -->
-								<article class="box post post-excerpt">
-									<header>
+		<!-- Post -->
+	<article class="box post post-excerpt">
+	<header>
+	<h2><a href="#">Registro De Casos</a></h2>
+	</header>
+	<div class="info">
 
+		<!-- TITULO EN LA PESTAÑA-->
+	<span class="date"><span class="month">Gestores</span>
 
-										<h2><a href="#">Registro De Casos</a></h2>
-										<hr>
+	</div>
 
-
-
-									</header>
-									<div class="info">
-
-
-										<!-- TITULO EN LA PESTAÑA-->
-										<span class="date"><span class="month">Gestores</span> <!--<span class="day">14</span><span class="year">, 2014</span></span>-->
-
-										<ul class="stats">
-
-										</ul>
-									</div>
-									<form id="form1" name="form1" method="post" action="../controlador/con_registrar_twitter.php">
-  <div align="center">
+  	<div align="center" >
     <h2>Complete los campos por gestor</h2>
-    <p>&nbsp;</p>
+	<br>
+	<form id="form1" name="form1" method="post" action="../controlador/con_registrar_twitter.php">
     <table width="500" border="1">
-
-
-  	 <tr>
-  	<th width="41" scope="col">&nbsp;</th>
-    <td width="298" scope="col"><div align="right"><strong>Gestor:</strong></div></td>
-    <td width="466" scope="col"><select name="gestor" id="gestor" required>
+  	<tr>
+    <td >
+    	<div align="right"><strong>Gestor:</strong></div>
+    </td>
+    <td >
+    	<select name="gestor" id="gestor"  style="width:50%;height:30px" required>
 			<option value="">Seleccione</option>
 			<option value="Carlos Garcia">Carlos Garcia</option>
 			<option value="Carlos Tineo">Carlos Tineo</option>
@@ -75,13 +65,15 @@ require ("session.php");
 			<option value="Junior Nunez">Junior Nunez</option>
 			<option value="Yadira Pino">Yadira Pino</option>
 
-		 </select></td>
-  </tr>
+		</select>
+	</td>
+  	</tr>
 
   <tr>
-    <td>&nbsp;</td>
-    <td><div align="right"><strong>Mes:</strong></div></td>
-    <td><select name="mes" id="mes" required>
+    <td>
+    	<div align="right"><strong>Mes:</strong></div>
+    </td>
+    <td><select name="mes" id="mes" style="width:50%;height:30px" required>
 			<option value="">Seleccione</option>
 			<option value="Enero">Enero</option>
 			<option value="Febrero">Febrero</option>
@@ -95,33 +87,30 @@ require ("session.php");
 			<option value="Octubre">Octubre</option>
 			<option value="Noviembre">Noviembre</option>
 			<option value="Diciembre">Diciembre</option>
-		 </select></td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td><div align="right"><strong>Cantidad:</strong></div></td>
-    <td><input type="numeric" name="cantidad" id="cantidad" required/></td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td><input type="hidden" name="ano" id="ano" value="2015" /></td>
-    <td>&nbsp;</td>
+		 </select>
+	</td>
   </tr>
 
   <tr>
- <tr>
-  <td colspan="4" align="center">&nbsp;</td>
- </tr>
+    <td><div align="right"><strong>Cantidad:</strong></div></td>
+    <td><input type="numeric" name="cantidad" id="cantidad" style="width:50%;height:30px" required/></td>
+
+  </tr>
+
+  <tr>
+    <td><input type="hidden" name="ano" id="ano" value="2015" /></td>
+  </tr>
+
+  <tr>
     <td colspan="4" align="center"><input type="submit" name="enviar" id="enviar" value="Enviar" />
       <!--<input type="reset" name="borrar" id="borrar" value="Borrar" /></td>-->	</td>
     </tr>
+
 </table>
-    <p>&nbsp;</p>
-    </div>
-</form></p>
+
+</form>
  <?php require ("../controlador/con_grafico.php");?>
-<div id="twitter"><script type="text/javascript"> FusionCharts.ready(function(){
+<div id="twitter" ></a>><script type="text/javascript"> FusionCharts.ready(function(){
 	var revenueChart = new FusionCharts({
         "type": "column3d",
         "renderAt": "twitter",
@@ -145,39 +134,20 @@ require ("session.php");
 
     revenueChart.render();
 })</script></div>
+</div>
+</div>
 
-
-
-								</article>
-
-
-
-						</div>
-					</div>
-
-				<!-- Sidebar -->
-				<?php
+<!-- Sidebar -->
+<?php
 require ("menu.php");
 ?>
 
-										<span class="date"><span class="month">Twitter</span> <!--<span class="day">14</span><span class="year">2014</span></span>-->
-										<!--
-											Note: You can change the number of list items in "stats" to whatever you want.
-										-->
+<span class="date"><span class="month">Twitter</span>
 
-									<div></div>
-								</article>
+</article>
 
-                                 </div>
-					</div>
-
-				<?php
+<?php
 require ("menu.php");
 ?>
-					</div>
-
-			</div>
-
-
-	</body>
+</body>
 </html>
