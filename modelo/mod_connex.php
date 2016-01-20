@@ -8,9 +8,9 @@ Class connex{
 	private $mysqlconn;
 
 	public function connex(){
-		$this->usuario='atevir';//'atevir';
-		$this->clave='atevir';//'atevir';
-		$this->servidor='192.168.210.130';//'192.168.210.130';
+		$this->usuario='root';//'atevir';
+		$this->clave='';//'atevir';
+		$this->servidor='localhost';//'192.168.210.130';
 		$this->bd='sci';
 		$this->puerto='3306';
 		$this->mysqlconn=' ';
