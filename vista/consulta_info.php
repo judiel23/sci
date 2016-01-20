@@ -19,13 +19,19 @@ require ("session.php");
 		<script src="js/skel.min.js"></script>
 		<script src="js/skel-layers.min.js"></script>
 		<script src="js/init.js"></script>
-		
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+		<script type="text/javascript">
+		$(window).load(function() {
+		// Animate loader off screen
+		$(".se-pre-con").fadeOut("slow");;
+	});
+		</script>
 		<noscript>
 			<link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
 			<link rel="stylesheet" href="css/style-desktop.css" />
 			<link rel="stylesheet" href="css/style-wide.css" />
-			
+
 		</noscript>
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 	</head>
@@ -34,7 +40,7 @@ require ("session.php");
 		Set it to "right-sidebar" to, you guessed it, position it on the right.
 	-->
 	<body class="left-sidebar">
-
+	<div class="se-pre-con"></div>
 		<!-- Wrapper -->
 			<div id="wrapper">
 
