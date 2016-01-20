@@ -136,13 +136,48 @@ require ("session.php");
     </tr>
 
 </table>
+<<<<<<< HEAD
+=======
 
 </form>
 
+ <?php require ("../controlador/con_grafico.php");?>
+<div id="twitter" ></a>><script type="text/javascript"> FusionCharts.ready(function(){
+	var revenueChart = new FusionCharts({
+        "type": "column3d",
+        "renderAt": "twitter",
+
+        "width": "700",
+        "height": "350",
+        "dataFormat": "json",
+        "dataSource": {
+          "chart": {
+              "caption": "Casos Registrados por mes",
+              "subCaption": " ",
+              "xAxisName": "Mes",
+              "yAxisName": "Cantidad de Registros",
+              "theme": "carbon"
+           },
+          "data": [
+            <?php twitter_mes();?>
+           ]
+        }
+    });
+
+    revenueChart.render();
+})</script>
+</div>
+>>>>>>> origin/master
+
+</form>
+
+<<<<<<< HEAD
  
 </div>
 
 
+=======
+>>>>>>> origin/master
 								</article>
 
 
