@@ -1,9 +1,8 @@
-
 <?php
 require ("session.php");
 ?>
 <html>
-	<head>
+<head>
 		<title>Inicio</title>
 		<link rel="icon" href="images/logot.png" type="image" sizes="16x16">
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />

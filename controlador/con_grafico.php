@@ -308,11 +308,64 @@ if($resultado){
 
 	$cons=json_encode($array[$i]);
 
+		echo" $cons,";
+			}
+			}// if
+                         }//end con
+
+function asistencia($desde, $hasta){
+ 	$conexion = new Connex();
+	$mysqlconn= $conexion->conectar();
 
 
+	$consulta= new reporte();
+
+	$resultado= $consulta->gest_asis($desde,$hasta,$mysqlconn);
+if($resultado){
+
+			 for($i=0; $i<mysqli_num_rows($resultado); $i++){
+ $row= mysqli_fetch_array($resultado, MYSQLI_ASSOC);
+ $a=$row["asis_gestor"];
+
+ $array[$i] = array( 'label'=>$a);
+
+	$cons=json_encode($array[$i]);
 
 		echo" $cons,";
 			}
 			}// if
                          }//end con
+
+function valores($gestor,$estatus,$desde, $hasta){
+ 	$conexion = new Connex();
+	$mysqlconn= $conexion->conectar();
+
+
+	$consulta= new reporte();
+
+	$resultado= $consulta->cuenta($gestor,$estatus,$desde,$hasta,$mysqlconn);
+if(mysqli_num_rows($resultado)==0) {
+	$a=0;
+	$cons=json_encode(array( 'value' =>$a ));
+
+		echo" $cons,";
+}
+
+			 for($i=0; $i<mysqli_num_rows($resultado); $i++){
+ $row= mysqli_fetch_array($resultado, MYSQLI_ASSOC);
+
+
+ $a=$row["num"];
+
+ $array[$i] = array( 'value'=>$a);
+
+	$cons=json_encode($array[$i]);
+
+		echo" $cons,";
+			}
+
+                         }//end con
+
+
+
 ?>

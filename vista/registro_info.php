@@ -1,13 +1,5 @@
 <?php
-session_start();
-$_SESSION['emp_login'];
-$_SESSION['emp_perfil'];
-$_SESSION['emp_clave'];
-if(!isset($_SESSION['emp_login'])){
-	header('Location: index.php');
-	 }else{
-
-		}
+require ("session.php");
 ?><!DOCTYPE HTML>
 
 <html>

@@ -76,7 +76,7 @@ class reporte {
         			$desde=date("Y-m-d", strtotime($desde));
         			$hasta=date("Y-m-d", strtotime($hasta));
         		}
-		$query= "SELECT con_tipocas, COUNT( * ) AS num FROM conatel where con_feulac between '$desde' and '$hasta' GROUP BY con_tipocas";
+		$query= "SELECT con_tipocas, COUNT( * ) AS num FROM conatel where con_fechac between '$desde' and '$hasta' GROUP BY con_tipocas";
 		$consulta= mysqli_query($mysqlconn, $query) or die ("Consulta Errónea: ".mysqli_error($mysqlconn));
 
 		return $consulta;
@@ -136,13 +136,29 @@ public function consolidado_info($gestor, $mes,$mysqlconn){
 		}//function voz_canal
 public function twitter_m($mysqlconn){
 
-		$query= "SELECT sum(twi_cantidad) as num, twi_mes as mes FROM twitter GROUP BY mes";
+		$query= "SELECT sum(twi_cantidad) as num, twi_mes as mes FROM twitter GROUP BY cod_mes";
 		$consulta= mysqli_query($mysqlconn, $query) or die ("Consulta Errónea: ".mysqli_error($mysqlconn));
 
 		return $consulta;
 
 		}//function voz_canal
+public function gest_asis($desde, $hasta,$mysqlconn){
 
+		$query= "SELECT DISTINCT asis_gestor FROM asistencia where asis_fecha between '$desde' and '$hasta'";
+		$consulta= mysqli_query($mysqlconn, $query) or die ("Consulta Errónea: ".mysqli_error($mysqlconn));
+
+		return $consulta;
+
+		}//function con_est
+
+public function cuenta($gestor,$estatus,$desde,$hasta,$mysqlconn){
+
+		$query= "SELECT COUNT(*) AS  num, asis_gestor FROM asistencia where asis_estatus='$estatus' and asis_gestor='$gestor' and asis_fecha between '$desde' and '$hasta' group by asis_estatus";
+		$consulta= mysqli_query($mysqlconn, $query) or die ("Consulta Errónea: ".mysqli_error($mysqlconn));
+
+		return $consulta;
+
+		}//function con_est
 
 
 }//class reporte

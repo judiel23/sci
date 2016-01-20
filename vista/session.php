@@ -19,5 +19,4 @@ if(isset($_SESSION['time']))
 
 }
 $_SESSION['time'] = time ();
-
 ?>

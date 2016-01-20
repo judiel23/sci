@@ -65,16 +65,16 @@ require ("session.php");
         "type": "column3d",
         "renderAt": "chartContainer1",
 
-        "width": "700",
-        "height": "321",
+        "width": "850",
+        "height": "450",
         "dataFormat": "json",
         "dataSource": {
           "chart": {
-              "caption": "Equipos Registrados desde ",
+              "caption": "Casos Registrados en el 2015",
               "subCaption": " ",
               "xAxisName": "Gestor",
               "yAxisName": "Cantidad de Registros",
-              "theme": "carbon"
+              "theme": "ocean"
            },
           "data": [
             <?php gar();?>

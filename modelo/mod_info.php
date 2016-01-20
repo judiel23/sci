@@ -49,7 +49,7 @@ class info{
 		}//class obtener
 
 		public function listar15($mysqlconn){
-		$query= "SELECT * FROM info ORDER BY in_id DESC LIMIT 20";
+		$query= "SELECT * FROM info ORDER BY in_id";
 		$consulta= mysqli_query($mysqlconn, $query) or die ("Consulta Errónea: ".mysqli_error($mysqlconn));
 		if($consulta){
 			return ($consulta);

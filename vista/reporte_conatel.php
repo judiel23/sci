@@ -7,8 +7,8 @@ if(!isset($_GET['desde'])&&!isset($_GET['hasta'])){
   $hasta="";
 }else{
   $desde=$_GET['desde'];
-  $hasta=$_GET['hasta'];  
-}   
+  $hasta=$_GET['hasta'];
+}
 ?>
 <!DOCTYPE HTML>
 
@@ -41,18 +41,18 @@ if(!isset($_GET['desde'])&&!isset($_GET['hasta'])){
 
 function Mostrar(cual) {
  var opcion = cual.estatus.options[cual.estatus.selectedIndex].text;
- 
+
 if (opcion == 'personalizado'){
   cual.desde.style.visibility='visible';
   cual.hasta.style.visibility='visible';
     cual.enviar.style.visibility='visible';
 
-} 
+}
 if (opcion == 'hoy'||opcion == 'Seleccione' ){
   cual.desde.style.visibility='hidden';
   cual.hasta.style.visibility='hidden';
   cual.enviar.style.visibility='hidden';
-} 
+}
 }
 //-->
 </script>
@@ -90,17 +90,17 @@ if (opcion == 'hoy'||opcion == 'Seleccione' ){
 
 </span></div></article>
 
-<div>  
-   
+<div>
+
 <form action='reporte_conatel.php'method='get' id="filtro">
   <select name="estatus" id="estatus" onChange="Mostrar(this.form)" >
     <option value="">Seleccione</option>
-    <option value="<?php echo date('Y-m-d');?>" >hoy</option>
+    <option value="<?php // echo date('Y-m-d');?>" >hoy</option>
     <option name="check" >personalizado</option>
-  </select>                 
-  <input type='date' name="desde" id="desde" style="visibility:hidden" required>
+  </select>
+  <input type='date' min="2016-01-01" name="desde" id="desde" style="visibility:hidden" required>
   </input>
-  <input type='date' name="hasta" id="hasta" style="visibility:hidden"required>
+  <input type='date' max="<?php echo date('Y-m-d'); ?>"name="hasta" id="hasta" style="visibility:hidden"required>
   </input>
   <input type="submit" name="enviar" id="enviar" value="enviar" style="visibility:hidden">
   </input>
@@ -108,7 +108,7 @@ if (opcion == 'hoy'||opcion == 'Seleccione' ){
 
 </div>
 
-      <div>   
+      <div>
         <?php require ("../controlador/con_grafico.php");?>
         <?php //echo "En estos momentos existen: ".$resultado." casos registrados en sistema";?>
       </div>
@@ -122,11 +122,11 @@ if (opcion == 'hoy'||opcion == 'Seleccione' ){
         "dataFormat": "json",
         "dataSource": {
           "chart": {
-              "caption": "Casos Registrados",
+              "caption": "Casos Registrados en el <?php if ($desde==""){ echo "Último mes";}else{ echo "Periodo ($desde / $hasta)";} ?>",
               "subCaption": " ",
               "xAxisName": "Gestor",
               "yAxisName": "Cantidad de Registros",
-              "theme": "carbon"
+              "theme": "ocean"
            },
           "data": [
             <?php con($desde,$hasta);?>
@@ -143,16 +143,16 @@ if (opcion == 'hoy'||opcion == 'Seleccione' ){
         "renderAt": "chartContainer",
 
         "width": "800",
-        "height": "690",
+        "height": "450",
         "dataFormat": "json",
         "dataSource": {
           "chart": {
-              "caption": "Tipo de Requerimiento",
+              "caption": "Tipo de Requerimiento en el <?php if ($desde==""){ echo "Último mes";}else{ echo "Periodo ($desde / $hasta)";} ?>",
               "subCaption": " ",
               "xAxisName": "Gestor",
               "valueFontSize":"12",
               "yAxisName": "Cantidad de Registros",
-              "theme": "carbon"
+              "theme": "ocean"
            },
           "data": [
             <?php con_asu($desde,$hasta);?>
@@ -172,12 +172,12 @@ if (opcion == 'hoy'||opcion == 'Seleccione' ){
         "dataFormat": "json",
         "dataSource": {
           "chart": {
-              "caption": "Estatus de Requerimiento",
+              "caption": "Estatus de Requerimiento en el <?php if ($desde==""){ echo "Último mes";}else{ echo "Periodo ($desde / $hasta)";} ?>",
               "subCaption": " ",
               "xAxisName": "Gestor",
               "valueFontSize":"18",
               "yAxisName": "Cantidad de Registros",
-              "theme": "carbon"
+              "theme": "ocean"
            },
           "data": [
             <?php con_estatus($desde,$hasta);?>
@@ -196,4 +196,8 @@ require ("menu.php");
 ?>
 
 	</body>
+  <script type="text/javascript">
+  $( document ).ready(function() {
+
+});</script>
 </html>

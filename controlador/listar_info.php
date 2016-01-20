@@ -19,7 +19,7 @@ require('../modelo/mod_connex.php');
 -->
 </style>
 
-<table width="580px" border="1" align="left" id="listado">
+<table width="" border="1" align="left" id="listado">
 					<thead>
       <tr>
               <!--<th align="right">Nombre del Gestor</th>-->

@@ -100,7 +100,7 @@ if (opcion == 'hoy'||opcion == 'Seleccione' ){
 <option name="check" >personalizado</option>
  </select>
  <input type='date' name="desde" id="desde" style="visibility:hidden" required>
- <input type='date' name="hasta" id="hasta" style="visibility:hidden"required></input>
+ <input type='date' max="<?php echo date('Y-m-d'); ?>" name="hasta" id="hasta" style="visibility:hidden"required></input>
   <input type="submit" name="enviar" id="enviar" value="enviar" style="visibility:hidden">
 </form>
 </div>
@@ -118,11 +118,11 @@ if (opcion == 'hoy'||opcion == 'Seleccione' ){
         "dataFormat": "json",
         "dataSource": {
           "chart": {
-              "caption": "Casos Registrados",
+              "caption": "Casos Registrados en el <?php if ($desde==""){ echo "Último mes";}else{ echo "Periodo ($desde / $hasta)";} ?>",
               "subCaption": " ",
               "xAxisName": "Gestor",
               "yAxisName": "Cantidad de Registros",
-              "theme": "carbon"
+              "theme": "ocean"
            },
           "data": [
             <?php info($desde,$hasta);?>
@@ -143,11 +143,11 @@ if (opcion == 'hoy'||opcion == 'Seleccione' ){
         "dataFormat": "json",
         "dataSource": {
           "chart": {
-              "caption": "Tipo de Requerimiento",
+              "caption": "Tipo de Requerimiento en el <?php if ($desde==""){ echo "Último mes";}else{ echo "Periodo ($desde / $hasta)";} ?>",
               "subCaption": " ",
               "xAxisName": "Gestor",
               "yAxisName": "Cantidad de Registros",
-              "theme": "carbon"
+              "theme": "ocean"
            },
           "data": [
             <?php inf_n($desde,$hasta);?>
@@ -179,7 +179,8 @@ if (opcion == 'hoy'||opcion == 'Seleccione' ){
         "yaxisvaluespadding": "10",
         "useroundedges": "1",
         "legendborderalpha": "0",
-        "showborder": "0"
+        "showborder": "0",
+        "theme": "ocean"
     },
     "categories": [
         {
@@ -228,7 +229,6 @@ if (opcion == 'hoy'||opcion == 'Seleccione' ){
     "dataset": [
         {
             "seriesname": "Mmorei01",
-            "color": "A66EDD",
             "data": [
               <?php for ($i=1; $i <=12; $i++) {
                 consolidado('Mmorei01',$i);
@@ -238,7 +238,7 @@ if (opcion == 'hoy'||opcion == 'Seleccione' ){
 
          {
             "seriesname": "Jreyes05",
-            "color": "829AFC",
+
             "data": [
                   <?php for ($i=1; $i <=12; $i++) {
                 consolidado('Jreyes05',$i);
@@ -247,7 +247,7 @@ if (opcion == 'hoy'||opcion == 'Seleccione' ){
         },
          {
             "seriesname": "Cgarci01",
-            "color": "5DFFBC",
+
             "data": [
                <?php for ($i=1; $i <=12; $i++) {
                 consolidado('Cgarci01',$i);
@@ -256,7 +256,7 @@ if (opcion == 'hoy'||opcion == 'Seleccione' ){
         },
          {
             "seriesname": "Ctineo01",
-            "color": "860CAB",
+
             "data": [
               <?php for ($i=1; $i <=12; $i++) {
                 consolidado('Ctineo01',$i);
@@ -265,7 +265,7 @@ if (opcion == 'hoy'||opcion == 'Seleccione' ){
         },
          {
             "seriesname": "Jgonza21",
-            "color": "BFD052",
+
             "data": [
                <?php for ($i=1; $i <=12; $i++) {
                 consolidado('Jgonza21',$i);
@@ -274,7 +274,7 @@ if (opcion == 'hoy'||opcion == 'Seleccione' ){
         },
          {
             "seriesname": "Hherna08",
-            "color": "701705",
+
             "data": [
                <?php for ($i=1; $i <=12; $i++) {
                 consolidado('Hherna08',$i);
@@ -283,7 +283,7 @@ if (opcion == 'hoy'||opcion == 'Seleccione' ){
         },
          {
             "seriesname": "Ypinov01",
-            "color": "00A674",
+
             "data": [
              <?php for ($i=1; $i <=12; $i++) {
                 consolidado('Ypinov01',$i);
@@ -292,7 +292,7 @@ if (opcion == 'hoy'||opcion == 'Seleccione' ){
         },
         {
             "seriesname": "Jnunez01",
-            "color": "F06F6F",
+
             "data": [
              <?php for ($i=1; $i <=12; $i++) {
                 consolidado('Jnunez01',$i);
@@ -306,7 +306,13 @@ if (opcion == 'hoy'||opcion == 'Seleccione' ){
     inChart.render();
 })</script></div>
 
+<div>
+<p>
 
+</p>
+  <p> Nota: <i>La falta de datos en algunos meses, por parte de los gestores, se debe al cambio de máquinas que
+   se realizó en el departamento, lo cual produjo la pérdida de la Información.</i></p>
+</div>
 
 						</div>
 					</div>

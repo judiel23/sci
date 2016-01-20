@@ -77,11 +77,11 @@ if(!isset($_SESSION['emp_login'])){
         "dataFormat": "json",
         "dataSource": {
           "chart": {
-              "caption": "Cantidad de Requerimientos por Canal de Atención",
+              "caption": "Cantidad de Requerimientos por Sub-Categoria en el 2015",
               "subCaption": " ",
-              "xAxisName": "Canal de Atención",
+              "xAxisName": "Sub-Categoria",
               "yAxisName": "Cantidad de Requerimientos",
-              "theme": "carbon"
+              "theme": "ocean"
            },
           "data": [
             <?php voz_canal();?>
@@ -103,12 +103,12 @@ if(!isset($_SESSION['emp_login'])){
         "dataFormat": "json",
         "dataSource": {
           "chart": {
-              "caption": "Estatus de Requerimiento",
+              "caption": "Cantidad de Requerimientos por Categoria en el 2015",
               "subCaption": " ",
               "xAxisName": "Gestor",
               "valueFontSize":"18",
               "yAxisName": "Cantidad de Registros",
-              "theme": "carbon"
+              "theme": "ocean"
            },
           "data": [
             <?php voz_estatus();?>

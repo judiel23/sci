@@ -6,8 +6,8 @@ if(!isset($_GET['desde'])&&!isset($_GET['hasta'])){
 	$hasta="";
 }else{
 	$desde=$_GET['desde'];
-	$hasta=$_GET['hasta'];	
-}	
+	$hasta=$_GET['hasta'];
+}
 ?>
 <!DOCTYPE HTML>
 
@@ -38,18 +38,18 @@ if(!isset($_GET['desde'])&&!isset($_GET['hasta'])){
 
 function Mostrar(cual) {
  var opcion = cual.estatus.options[cual.estatus.selectedIndex].text;
- 
+
 if (opcion == 'personalizado'){
 	cual.desde.style.visibility='visible';
 	cual.hasta.style.visibility='visible';
     cual.enviar.style.visibility='visible';
 
-} 
+}
 if (opcion == 'hoy'||opcion == 'Seleccione' ){
 	cual.desde.style.visibility='hidden';
 	cual.hasta.style.visibility='hidden';
 	cual.enviar.style.visibility='hidden';
-} 
+}
 }
 //-->
 </script>
@@ -90,14 +90,14 @@ if (opcion == 'hoy'||opcion == 'Seleccione' ){
 
 </span></div></article>
 
- <div>  
- 	 
+ <div>
+
    <form action='reporte_bitacora.php'method='get' id="filtro">
  <select name="estatus" id="estatus" onChange="Mostrar(this.form)" >
 <option value="">Seleccione</option>
 <option value="<?php echo date('Y-m-d');?>" >hoy</option>
 <option name="check" >personalizado</option>
- </select>                 
+ </select>
  <input type='date' name="desde" id="desde" style="visibility:hidden" required>
  <input type='date' name="hasta" id="hasta" style="visibility:hidden"required></input>
   <input type="submit" name="enviar" id="enviar" value="enviar" style="visibility:hidden">
@@ -109,19 +109,19 @@ if (opcion == 'hoy'||opcion == 'Seleccione' ){
                                                          //php echo "En estos momentos existen: ".$resultado." casos registrados en sistema";?></div>
 <div id="chartContainer1"><script type="text/javascript"> FusionCharts.ready(function(){
       var revenueChart = new FusionCharts({
-        "type": "column3d",
+        "type": "pie3d",
         "renderAt": "chartContainer1",
 
-        "width": "700",
-        "height": "321",
+        "width": "900",
+        "height": "500",
         "dataFormat": "json",
         "dataSource": {
           "chart": {
-              "caption": "Alcance",
+              "caption": "Aplicaciones y Servicios Afectados en el periodo <?php echo "$desde / $hasta" ?>",
               "subCaption": " ",
               "xAxisName": "",
               "yAxisName": "Cantidad de Registros",
-              "theme": "carbon"
+              "theme": "ocean"
            },
           "data": [
 
